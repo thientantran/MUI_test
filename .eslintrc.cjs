@@ -16,6 +16,12 @@ module.exports = {
     react: {
       // Nói eslint-plugin-react tự động biết version của React.
       version: 'detect'
+    },
+    'import/resolver': {
+      node: {
+        paths: [path.resolve(__dirname, '')],
+        extensions: ['.js', '.jsx']
+      }
     }
   },
   parserOptions: {
@@ -31,6 +37,7 @@ module.exports = {
     node: true
   },
   rules: {
+    'react/jsx-filename-extension': 'off',
     // Tắt rule yêu cầu import React trong file jsx
     'react/react-in-jsx-scope': 'off',
     // Cảnh báo khi thẻ <a target='_blank'> mà không có rel="noreferrer"
