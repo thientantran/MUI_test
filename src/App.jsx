@@ -2,8 +2,8 @@ import { Add, Settings } from '@mui/icons-material'
 import { Button, Typography, styled } from '@mui/material'
 import './App.css'
 function App() {
-  const CustomButton = styled(Button)({
-    backgroundColor: 'skyblue',
+  const CustomButton = styled(Button)(({ theme }) => ({
+    backgroundColor: theme.palette.otherColor.main,
     color: 'black',
     margin: 5,
     '&:hover': {
@@ -13,11 +13,11 @@ function App() {
       backgroundColor: 'gray',
       color: 'white'
     }
-  })
+  }))
   return (
     <div>
       <Button variant='text'>Text</Button>
-      <Button variant='contained' color='secondary' size='small' startIcon={<Settings />}>
+      <Button variant='contained' color='otherColor' size='small' startIcon={<Settings />}>
         Contained
       </Button>
       <Button variant='contained' size='small' sx={{ marginLeft: '10px' }} color='success' startIcon={<Add />}>
