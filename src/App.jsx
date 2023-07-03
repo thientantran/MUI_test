@@ -1,7 +1,19 @@
 import { Add, Settings } from '@mui/icons-material'
-import { Button, Typography } from '@mui/material'
+import { Button, Typography, styled } from '@mui/material'
 import './App.css'
 function App() {
+  const CustomButton = styled(Button)({
+    backgroundColor: 'skyblue',
+    color: 'black',
+    margin: 5,
+    '&:hover': {
+      backgroundColor: 'lightblue'
+    },
+    '&:disabled': {
+      backgroundColor: 'gray',
+      color: 'white'
+    }
+  })
   return (
     <div>
       <Button variant='text'>Text</Button>
@@ -14,23 +26,7 @@ function App() {
       <Typography variant='h1' component='h2'>
         h1. Heading
       </Typography>
-      <Button
-        variant='contained'
-        sx={{
-          backgroundColor: 'skyblue',
-          color: 'black',
-          margin: 5,
-          '&:hover': {
-            backgroundColor: 'lightblue'
-          },
-          '&:disabled': {
-            backgroundColor: 'gray',
-            color: 'white'
-          }
-        }}
-      >
-        My Unique Button
-      </Button>
+      <CustomButton>My Unique Button</CustomButton>
     </div>
   )
 }
