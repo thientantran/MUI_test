@@ -1,7 +1,6 @@
 import { Mail, Notifications, Pets } from "@mui/icons-material";
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from "@mui/material";
 import { useState } from "react";
-
 const StyledToolbar = styled(Toolbar)({
   display:'flex',
   justifyContent:'space-between'
@@ -31,6 +30,7 @@ const UserBox = styled(Box)(({theme})=>({
     display:'none'
   }
 }))
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   return <AppBar position="sticky">
