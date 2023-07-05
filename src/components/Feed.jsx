@@ -1,7 +1,7 @@
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ShareIcon from '@mui/icons-material/Share';
-import { Box } from '@mui/material';
+import { Box, Checkbox } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -31,7 +31,7 @@ export default function Feed() {
       />
       <CardMedia
         component="img"
-        height="194"
+        height="20%"
         image="https://media-cdn-v2.laodong.vn/storage/newsportal/2023/3/5/1154465/Jisoo-1K.jpg"
         alt="Paella dish"
       />
@@ -44,7 +44,7 @@ export default function Feed() {
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{color:'red'}} />} />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />

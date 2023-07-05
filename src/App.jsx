@@ -1,4 +1,4 @@
-import { Container, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import Feed from './components/Feed'
 import Navbar from './components/Navbar'
 import Rightbar from './components/Rightbar'
@@ -6,7 +6,7 @@ import Sidebar from './components/Sidebar'
 
 function App() {
   return (
-    <Container>
+    <Box>
       {/* Box và conainter tương tự nhau, để bọc lại, dùng như thẻ div, khác nhau là container có margin x autos */}
       {/* Trong box có flex, giúp điều chỉnh tỷ lệ */}
       <Navbar/>
@@ -15,7 +15,7 @@ function App() {
         <Feed/>
         <Rightbar/>
       </Stack>
-    </Container>
+    </Box>
   )
 }
 
