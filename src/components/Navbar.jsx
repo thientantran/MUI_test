@@ -1,5 +1,5 @@
 import { Mail, Notifications, Pets } from "@mui/icons-material";
-import { AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography, styled } from "@mui/material";
+import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)({
   display:'flex',
@@ -50,5 +50,20 @@ export default function Navbar() {
           <Typography variant="span">Love Jisoo</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          'aria-labelledby': 'fade-button',
+        }}
+        open={open}
+        anchorOrigin={{
+          vertical:'top',
+          horizontal:'right'
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
 }
