@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 export default function Post() {
   return (
-    <Card>
+    <Card sx={{marginBottom:5}}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
