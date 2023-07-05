@@ -1,5 +1,5 @@
-import { Add as AddIcon } from '@mui/icons-material';
-import { Box, Fab, Modal, Tooltip, Typography, styled } from '@mui/material';
+import { Add as AddIcon, DateRange, EmojiEmotions, Image, PersonAdd, VideoCameraBack } from '@mui/icons-material';
+import { Avatar, Box, Button, ButtonGroup, Fab, Modal, Stack, TextField, Tooltip, Typography, styled } from '@mui/material';
 import React, { useState } from 'react';
 const UserBox = styled(Box)({
   display:'flex',
@@ -25,8 +25,34 @@ export default function Add() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-      <Box width={400} height={280} bgcolor='white' p={3} borderRadius={5}>
+      <Box width={400} height={300} bgcolor='white' p={3} borderRadius={5}>
         <Typography variant='h6' color='gray' textAlign='center'>Create Post</Typography>
+
+        <UserBox>
+          <Avatar sx={{width:30, height:30}} src='https://townsquare.media/site/252/files/2021/08/attachment-blackpink-jisoo-blonde-e1628094363838.jpg'/>
+          <Typography fontWeight={500} variant='span'>Jisoo</Typography>
+        </UserBox>
+
+        <TextField
+          sx={{width:"100%"}}
+          id="standard-multiline-static"
+          multiline
+          rows={4}
+          placeholder="What you want to say?  "
+          variant="standard"
+        />
+
+        <Stack direction='row' gap={1} mb={3} mt={2}>
+          <EmojiEmotions color='primary'/>
+          <Image color='secondary'/>
+          <VideoCameraBack color='success'/>
+          <PersonAdd color='error'/>
+        </Stack>
+
+        <ButtonGroup fullWidth variant="contained" aria-label="outlined primary button group">
+          <Button>Post</Button>
+          <Button sx={{width:'100px'}}><DateRange/></Button>
+        </ButtonGroup>
       </Box>
     </Modal>
     </>
